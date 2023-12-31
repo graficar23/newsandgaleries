@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function noticias_theme($existing, $type, $theme, $path)
+{
+    return [
+    'noticias' => [
+      'template'  => 'noticias',
+      'variables' => [
+         'url' => null,
+         'noticias' => null,
+         'pager' => null,
+      ],
+    ],
+  ];
+}
+
+//
+// function noticias_page_attachments(array &$page)
+// {
+//     $page['#attached']['library'][] = 'noticias/noticias';
+// }

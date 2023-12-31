@@ -1,0 +1,35 @@
+{{ attach_library('noticias/noticias') }}
+<section class="home">
+	<div class="banner">
+			<img class="img-fluid banner" src="{{ url }}/img/head-control.jpg" alt="Noticias" />
+			<div class="texto inter-banner">
+				<div class="container">
+						<div class="row">
+								<div class="col-sm-6" role="heading">
+										<h1 class="infivalle_title1">
+                      Noticias
+										</h1>
+                    <p>Con la información más destacada de nuestros resultados y logros institucionales por un Valle Invencible</p>
+								</div>
+						</div>
+				</div>
+			</div>
+	</div>
+</section>
+<div class="container mt-5-5">
+  {% for noticia in noticias %}
+    <div class="row mb-5">
+      <div class="col-md-5 text-justify">
+          <img class="img-fluid banner" src="{{noticia.imagen}}"  />
+      </div>
+      <div class="col-md-7 text-justify">
+          <h2 class="infivalle_title8"><strong>{{ noticia.created.value|date('U')|format_date('custom', 'F j, Y') }}</strong> {{noticia.title}}</h2>
+          <p>{{noticia.descripcion}}</p>
+          <a href="{{ url('<front>') }}{{ noticia.url }}" class="read_more_inter">Ver más</a>
+      </div>
+    </div>
+  {% endfor %} 
+</div>
+<div>
+  {{ pager }}
+</div>

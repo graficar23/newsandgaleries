@@ -1,0 +1,49 @@
+{{ attach_library('prensa/prensa') }}
+<section class="home">
+	<div class="banner">
+			<img class="img-fluid banner" src="{{ url }}/img/head-control.jpg" alt="Videos" />
+			<div class="texto inter-banner">
+				<div class="container">
+						<div class="row">
+								<div class="col-sm-6" role="heading">
+										<h1 class="infivalle_title1">
+                      VIDEOS
+										</h1>
+								</div>
+						</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<div class="container mt-5 body-page">
+	<div class="row">
+			<div class="col-sm-12" role="heading">
+				<h2>Videos Infivalle</h2>
+			</div>
+	</div>
+</div>
+
+
+<div class="container mt-5-5">
+    <div class="d-flex flex-row grid-inter text-center flex-wrap">
+      {% for video in videos %}
+        <a href="{{video.path}}" class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class=" d-flex align-content-between flex-wrap mb-5-5">
+                <img class="img-thumbnail" 
+                    src="{{video.imagen}}"
+                    alt="{{video.title}}">
+                <h2 class="infivalle_title3">{{video.title}}</h2>
+                <!-- <p>{{video.descripcion|raw}}</p> -->
+            </div>
+				</a>
+      {% endfor %}
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <iframe frameborder="0" name="1610467826445" allowfullscreen="" src=""  id="videobox" class="cboxIframe" style="width: 80%; height: 70% ; margin: auto  auto;"></iframe>
+  </div>
+</div>

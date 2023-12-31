@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function prensa_theme($existing, $type, $theme, $path)
+{
+  return [
+    'galerias' => [
+      'template'  => 'galerias',
+      'variables' => [
+         'url' => null,
+         'galerias' => null,
+         'pager' => null,
+      ],
+    ],
+    'videos' => [
+      'template'  => 'videos',
+      'variables' => [
+         'url' => null,
+         'videos' => null,
+         'pager' => null,
+      ],
+    ],
+    'audios' => [
+      'template'  => 'audios',
+      'variables' => [
+         'url' => null,
+         'audios' => null,
+         'pager' => null,
+      ],
+    ],
+  ];
+}
+
+//
+// function noticias_page_attachments(array &$page)
+// {
+//     $page['#attached']['library'][] = 'noticias/noticias';
+// }

@@ -1,0 +1,23 @@
+prensa.galerias:
+    path: '/galerias'
+    defaults:
+        _controller: '\Drupal\prensa\Controller\PrensaController::galeriaContent'
+    requirements:
+        _permission: 'access content'
+    arguments: ['@entity.query', '@entity_type.manager']
+
+prensa.videos:
+    path: '/videos'
+    defaults:
+        _controller: '\Drupal\prensa\Controller\PrensaController::videosContent'
+    requirements:
+        _permission: 'access content'
+    arguments: ['@entity.query', '@entity_type.manager']
+
+prensa.audios:
+    path: '/audios'
+    defaults:
+        _controller: '\Drupal\prensa\Controller\PrensaController::audiosContent'
+    requirements:
+        _permission: 'access content'
+    arguments: ['@entity.query', '@entity_type.manager']

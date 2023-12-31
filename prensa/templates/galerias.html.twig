@@ -1,0 +1,32 @@
+{{ attach_library('prensa/prensa') }}
+<section class="home">
+	<div class="banner">
+			<img class="img-fluid banner" src="{{ url }}/img/head-control.jpg" alt="Noticias" />
+			<div class="texto inter-banner">
+				<div class="container">
+						<div class="row">
+								<div class="col-sm-6" role="heading">
+										<h1 class="infivalle_title1">
+                       Galeria de Imágenes 
+										</h1>
+								</div>
+						</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<div class="container mt-5-5">
+  {% for galeria in galerias %}
+    <div class="row mb-5">
+      <div class="col-md-5 text-justify">
+          <img class="img-fluid banner" src="{{galeria.imagen}}"  />
+      </div>
+      <div class="col-md-7 text-justify">
+          <h2 class="infivalle_title8"><strong>Galería</strong> {{galeria.title}}</h2>
+          <p>{{galeria.descripcion|raw}}</p>
+          <a href="{{ url('<front>') }}{{ galeria.url }}" class="read_more_inter">Ver más</a>
+      </div>
+    </div>
+  {% endfor %} 
+</div>

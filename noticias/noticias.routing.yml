@@ -1,0 +1,7 @@
+noticias.content:
+    path: '/noticias'
+    defaults:
+        _controller: '\Drupal\noticias\Controller\NoticiasController::contenido'
+    requirements:
+        _permission: 'access content'
+    arguments: ['@entity.query', '@entity_type.manager']

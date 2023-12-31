@@ -1,0 +1,6 @@
+name: Modulo Sala de prensa
+description: Subhomes de galerías de fotos, videos y audios de Infivalle
+package: Infivalle
+
+type: module
+core: 8.x

@@ -1,0 +1,43 @@
+{{ attach_library('prensa/prensa') }}
+<section class="home">
+	<div class="banner">
+			<img class="img-fluid banner" src="{{ url }}/img/head-control.jpg" alt="Audios" />
+			<div class="texto inter-banner">
+				<div class="container">
+						<div class="row">
+								<div class="col-sm-6" role="heading">
+										<h1 class="infivalle_title1">
+                      AUDIOS
+										</h1>
+								</div>
+						</div>
+				</div>
+			</div>
+	</div>
+</section>
+
+<div class="container mt-5 body-page">
+	<div class="row">
+			<div class="col-sm-12" role="heading">
+				<h2>Audios Infivalle</h2>
+			</div>
+	</div>
+</div>
+
+
+<div class="container mt-5-5">
+    <div class="d-flex flex-row grid-inter text-center flex-wrap">
+      {% for audio in audios %}
+        <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <div class=" d-flex align-content-between flex-wrap mb-5-5">
+              <audio controls>
+                <source src="{{audio.url}}" type="audio/mpeg" >
+                Tu navegador no soporta el tipo de archivo.
+              </audio>
+              <h2 class="infivalle_title3">{{audio.title}}</h2>
+              <p>{{audio.descripcion|raw}}</p>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>

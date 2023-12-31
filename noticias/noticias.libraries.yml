@@ -1,0 +1,9 @@
+noticias:
+  version: 1.x
+  css:
+    theme:
+      css/noticias.css: {}
+  js:
+    js/noticias.js: {}
+  dependencies:
+    - core/jquery

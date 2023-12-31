@@ -1,0 +1,46 @@
+/* HOME */
+section.home{
+  
+}
+section.home .banner{
+    position: relative;
+    overflow: hidden;
+}
+section.home .banner .texto{
+    position: absolute;
+    top: 24%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+section.home .banner .texto h1{
+    font-size: 50px;
+}
+section.home .banner .texto p{
+    color: #383745;
+    background-color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+div.body-page h2{
+	font-weight: 700;
+	font-size: 30px;
+	position: relative;
+	padding-left: 60px;
+	padding-bottom: 13px;
+	border-bottom: dotted 2px #6591ae;
+}
+div.body-page h2::before{
+	background: url(../img/site/icon_logo.png);
+	content: "";
+	display: inline;
+	height: 39px;
+	position: absolute;
+	left: -10px;
+	top: -2px;
+	width: 65px;
+}

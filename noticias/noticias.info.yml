@@ -1,0 +1,6 @@
+name: Home Noticias
+description: Subhome de noticias Infivalle
+package: Infivalle
+
+type: module
+core: 8.x
